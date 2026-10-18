@@ -1,0 +1,33 @@
+# Gizli bilgiler ASLA versiyon kontrolüne girmez
+.env
+*.env.local
+
+# Üretilen veri, ham arşivler, yerel durum dosyaları
+data/
+!data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# İstemci/çalışma artefaktları
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Yerel ortam / editör
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+
+# EVREN kullanım şartı onayı (yerel ve tekrar üretilebilir durum)
+data/evren_terms_accepted.json

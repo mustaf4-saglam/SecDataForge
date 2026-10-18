@@ -1,0 +1,11 @@
+{
+  "qa_id": "qa:gh:GHSA-mp22-58ff-6fhr:00000001",
+  "question": "GHSA-mp22-58ff-6fhr (CVE-2026-96628) zafiyeti hangi paketi ve hangi etkiyi kapsar?",
+  "answer": "Arcane v2.10.2'deki `github.com/getarcaneapp/arcane/backend/v2` paketinde, `AuthMiddleware.managerAuth`'ta bir yetkilendirme tutarsızlığı bulunmuştur. Geçerli bir ortam erişim tokeni ile `/api/debug/pprof` uç noktası admin yetkisi gerektirmeden erişilebilir hale gelebilir.",
+  "source_record_ids": ["gh:GHSA-mp22-58ff-6fhr"],
+  "grounding_fields": ["title", "description_original", "cve_ids", "affected_packages"],
+  "model_used": "ollama:llama3.2",
+  "generated_at": "2026-10-17T20:00:00+00:00",
+  "validation_status": "pending",
+  "needs_human_review": true
+}

@@ -1,0 +1,23 @@
+{
+  "record_id": "gh:GHSA-mp22-58ff-6fhr",
+  "source": "github",
+  "source_id": "GHSA-mp22-58ff-6fhr",
+  "source_url": "https://github.com/advisories/GHSA-mp22-58ff-6fhr",
+  "license": null,
+  "license_status": "unknown",
+  "collected_at": "2026-10-17T19:08:41.208317+00:00",
+  "published_at": "2026-10-16T21:12:03+00:00",
+  "modified_at": "2026-10-16T21:12:05+00:00",
+  "title": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+  "description_original": "## Summary\n\nArcane v2.10.2 contains an authorization inconsistency in `AuthMiddleware.managerAuth`.\n\nWhen a request supplies a valid environment access token through the `X-Arcane-Agent-Token` header, `managerAuth` bypasses the admin-required authorization gate on `/api/debug/pprof`.\n\n## Affected Packages\n\n`github.com/getarcaneapp/arcane/backend/v2` ...",
+  "description_tr": "Arcane v2.10.2'de `AuthMiddleware.managerAuth` içinde bir yetkilendirme tutarsızlığı var. ...",
+  "cve_ids": ["CVE-2026-96628"],
+  "cwe_ids": ["CWE-287"],
+  "affected_packages": ["github.com/getarcaneapp/arcane/backend/v2@go"],
+  "severity": "medium",
+  "references": ["https://github.com/getarcaneapp/arcane/security/advisories/GHSA-mp22-58ff-6fhr"],
+  "remediation_tr": "Arcane'ı en son yamalı sürüme güncelleyin.",
+  "raw_hash": "d353926ee001a52a49f659a08c305906f45a97a85ac3e2346a1b391ba9744389",
+  "quality_status": "review",
+  "quality_issues": ["lisans durumu belirsiz veya kısıtlı"]
+}

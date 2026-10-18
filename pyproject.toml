@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secdataforge"
+version = "0.1.0"
+description = "Açık ve yeniden kullanılabilir siber güvenlik veri seti üretim aracı."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "SecDataForge contributors" }]
+dependencies = [
+    "httpx>=0.27,<0.29",
+    "pydantic>=2.7,<3",
+    "python-dotenv>=1.0",
+    "rich>=13",
+    "streamlit>=1.30",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.8",
+]
+dashboard = [
+    "streamlit>=1.30",
+    "pandas>=2.2",
+]
+
+[project.scripts]
+secdataforge = "secdataforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["secdataforge*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["secdataforge"]
+
+[tool.ruff.lint.per-file-ignores]
+# Streamlit betiği src dizinini sys.path'e ekledikten sonra import eder
+"app/dashboard.py" = ["E402", "I001"]
